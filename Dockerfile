@@ -1,4 +1,4 @@
-FROM node:8-alpine
+FROM node:8.10-alpine
 
 # Install aws cli
 RUN wget "s3.amazonaws.com/aws-cli/awscli-bundle.zip" -O "awscli-bundle.zip" && \
