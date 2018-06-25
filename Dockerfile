@@ -1,4 +1,4 @@
-FROM node:6.9.4-alpine
+FROM node:8-alpine
 
 # Install aws cli
 RUN wget "s3.amazonaws.com/aws-cli/awscli-bundle.zip" -O "awscli-bundle.zip" && \
@@ -7,5 +7,5 @@ RUN wget "s3.amazonaws.com/aws-cli/awscli-bundle.zip" -O "awscli-bundle.zip" && 
     rm /var/cache/apk/* && \
     ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws && \
     rm awscli-bundle.zip && \
-    rm -rf awscli-bundle && \ 
+    rm -rf awscli-bundle && \
     aws --version
